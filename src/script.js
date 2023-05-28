@@ -191,7 +191,7 @@ window.addEventListener('load',() => {
     
     effect1.Init(ctx)
     effect1.togglePhysics()
-    // effect1.togglePhysics()
+    effect1.togglePhysics()
     
     
     
