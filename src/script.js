@@ -41,7 +41,7 @@ window.addEventListener('load',() => {
             this.friction = 0.98
         }
 
-        //toggle physic
+        
 
         draw(context){
             context.fillStyle = this.color
@@ -58,10 +58,10 @@ window.addEventListener('load',() => {
         update(){
 
 
-            this.dx = this.effect.mouse.x - this.x
-            this.dy = this.effect.mouse.y - this.y
+            this.dx = this.effect.mouse.x - this.x // the difference between the mousex pos and the particle x pos
+            this.dy = this.effect.mouse.y - this.y // the difference between the mousey pos and the particle y pos
 
-            this.distance = this.dx * this.dx + this.dy * this.dy // Ptheorem
+            this.distance = this.dx * this.dx + this.dy * this.dy // Pythagoras theoren to find the distance between the dx and dy, the distance sqr has been ommited for performance reasons.
 
             this.force = -this.effect.mouse.radius / this.distance
 
