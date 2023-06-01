@@ -5,7 +5,7 @@ connvert images to pixels and enable physics to have mouse interactions, create 
 
 instantaite the effect class:
 
-new Effect(canvas.width, canvas,height, Image)
+new effect(canvas.width, canvas,height, Image)
 
 ## Methods
 init() --> this method takes in the canvas context as an argument, loops through the width(rows) and the height(column) of the image, getting the color data(RGBA) and instantiates a particle class if the alpha value in the data is more than one.
