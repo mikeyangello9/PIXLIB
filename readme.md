@@ -18,3 +18,32 @@ update() --> this.dx = this.effect.mouse.x - this.x // the difference between th
 
             this.distance = this.dx * this.dx + this.dy * this.dy // Pythagoras theoren to find the distance between the dx and dy, the distance sqr has been ommited for performance reasons.
 
+
+## example of instantiation
+  // instantiation
+    const canvas  = document.querySelector('#canvas')
+    const ctx = canvas.getContext('2d')
+    const image  = document.querySelector('#image1')
+
+    const effect1 = new Effect(canvas.width, canvas.height, image)
+   
+    
+    effect1.Init(ctx)
+    effect1.togglePhysics()
+    effect1.togglePhysics()
+    
+    
+    
+    
+    const animate = () =>{
+        ctx.clearRect(0, 0, canvas.width, canvas.height) // prevent trailing particles 
+        // effect1.drawImage(ctx)
+        effect1.drawEffect(ctx)
+        // effect1.drawAsciiEffect(ctx) // for ascii
+        effect1.update()
+        requestAnimationFrame(animate)
+       
+    }
+   
+
+    animate()
