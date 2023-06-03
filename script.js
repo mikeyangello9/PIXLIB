@@ -19,8 +19,7 @@ window.addEventListener('load',() => {
     // make use of drawImage and getImageData methods to analyse images pixel by pixel
     // particle class 
     // console.log(ctx)
-
-    class Particle{
+ export class Particle{
         constructor(effect, x, y, color){
             this.effect = effect // reference to the entire effect class
             this.x = Math.random() * this.effect.width // xPos of particle
@@ -189,6 +188,8 @@ window.addEventListener('load',() => {
     // console.log(effect1)
     
 })
+
+export{Particle, Effect};
 
 // add physics
 
