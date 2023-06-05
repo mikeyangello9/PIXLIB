@@ -1,8 +1,6 @@
-window.addEventListener('load',() => {
+// create a canvas
 
-    // create a canvas
-
-    const createCanvas = (id, width, height) =>{
+    const createCanvas = (id, width, height) => {
         const canvas = document.createElement('canvas')
         canvas.id = id
         canvas.width = width
@@ -187,7 +185,6 @@ window.addEventListener('load',() => {
     
     // console.log(effect1)
     
-})
 
 export{Particle, Effect};
 
