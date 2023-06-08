@@ -18,7 +18,7 @@
     // particle class 
     // console.log(ctx)
     class Particle{
-        constructor(effect, x, y, color){
+        constructor(effect, x, y, color, context){
             this.effect = effect // reference to the entire effect class
             this.x = Math.random() * this.effect.width // xPos of particle
             this.y = Math.random() * this.effect.height // yPos of particle
@@ -36,6 +36,7 @@
             this.force = 0
             this.angle = 0
             this.friction = 0.98
+            this.context = context
         }
 
         
@@ -83,7 +84,7 @@
 
    
     class Effect{
-        constructor(canvas, width, height, image){
+        constructor(canvas, context, width, height, image){
             this.width = width
             this.height = height
             this.particlesArray = [] // particle array
@@ -91,6 +92,7 @@
             this.gap = 3
             this.enablePhysics = false
             this.canvas = canvas
+            this.context = context
 
             this.mouse = {
                 radius : 3000,
