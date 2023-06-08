@@ -63,7 +63,7 @@
 
             this.force = -this.effect.mouse.radius / this.distance
 
-            if(this.distance < this.effect.mouse.radius && this.effect.enablePhysics == true){
+            if(this.distance < this.effect.mouse.radius){
                 this.angle = Math.atan2(this.dy, this.dx) // takes the range between +pi and -pi
                 this.velocityX += this.force * Math.cos(this.angle)
                 this.velocityY += this.force * Math.sin(this.angle)
@@ -84,15 +84,15 @@
 
    
     class Effect{
-        constructor(canvas, context, width, height, image){
+        constructor(canvas, ctx, width, height, image){
             this.width = width
             this.height = height
             this.particlesArray = [] // particle array
             this.image = image
-            this.gap = 3
+            this.gap = 4
             this.enablePhysics = false
             this.canvas = canvas
-            this.context = context
+            this.ctx = ctx
 
             this.mouse = {
                 radius : 3000,
@@ -172,14 +172,15 @@
         }
 
         
-        togglePhysics(){
-            return this.enablePhysics = !this.enablePhysics
-        }
+        // togglePhysics(){
+        //     return this.enablePhysics = !this.enablePhysics
+        // }
 
     
 
     }
-    
+
+
 
   
 
