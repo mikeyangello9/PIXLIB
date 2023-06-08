@@ -83,13 +83,14 @@
 
    
     class Effect{
-        constructor(width, height, image){
+        constructor(canvas, width, height, image){
             this.width = width
             this.height = height
             this.particlesArray = [] // particle array
             this.image = image
             this.gap = 3
             this.enablePhysics = false
+            this.canvas = canvas
 
             this.mouse = {
                 radius : 3000,
