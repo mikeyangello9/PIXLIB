@@ -63,7 +63,7 @@
 
             this.force = -this.effect.mouse.radius / this.distance
 
-            if(this.distance < this.effect.mouse.radius){
+            if(this.distance < this.effect.mouse.radius && this.effect.enablePhysics == true){
                 this.angle = Math.atan2(this.dy, this.dx) // takes the range between +pi and -pi
                 this.velocityX += this.force * Math.cos(this.angle)
                 this.velocityY += this.force * Math.sin(this.angle)
@@ -172,9 +172,9 @@
         }
 
         
-        // togglePhysics(){
-        //     return this.enablePhysics = !this.enablePhysics
-        // }
+        togglePhysics(){
+            return this.enablePhysics = !this.enablePhysics
+        }
 
     
 
